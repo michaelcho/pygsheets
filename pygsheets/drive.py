@@ -169,11 +169,11 @@ class DriveAPIWrapper(object):
         else:
             query = mime_type_query
         result = self.list(fields=FIELDS_TO_INCLUDE,
-                           q=query, pageSize=500, orderBy='recency')
+                           q=query, pageSize=500, orderBy='recency desc')
 
         if self.is_team_drive() and not result and not only_team_drive:
             return self.list(fields=FIELDS_TO_INCLUDE, corpora="allDrives",
-                             q=query, pageSize=500, orderBy='recency')
+                             q=query, pageSize=500, orderBy='recency desc')
         return result
 
     def delete(self, file_id, **kwargs):
