@@ -23,7 +23,7 @@ This module provides wrappers for the Google Drive API v3.
 PERMISSION_ROLES = ['organizer', 'owner', 'writer', 'commenter', 'reader']
 PERMISSION_TYPES = ['user', 'group', 'domain', 'anyone']
 
-FIELDS_TO_INCLUDE = 'files(id, name, parents), nextPageToken, incompleteSearch'
+FIELDS_TO_INCLUDE = 'files(id, name, parents, viewedByMeTime, webViewLink), nextPageToken, incompleteSearch'
 
 _EMAIL_PATTERN = re.compile(r"\"?([-a-zA-Z0-9.`?{}]+@[-a-zA-Z0-9.]+\.\w+)\"?")
 DISCOVERY_SERVICE_URL = 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'
